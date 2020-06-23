@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form method="post" action="{%url 'updated'%}">
+    {%csrf_token%}
+<table align="center" border="2">
+    <tr><th><input type="number" name="id" value="{{qs.id}}" readonly></th></tr>
+    <tr><th><input type="number" name="a" value="{{qs.no}}"></th></tr>
+    <tr><th><input type="text" name="b" value="{{qs.product}}"></th></tr>
+    <tr><th><input type="number" name="c" value="{{qs.proposal_no}}"></th></tr>
+    <tr><th><input type="text" name="d" value="{{qs.inwardnumber}}"></th></tr>
+    <tr><th><input type="text" name="e" value="{{qs.currentworkstep}}"></th></tr>
+    <tr><th><input type="text" name="f" value="{{qs.names}}"></th></tr>
+    <tr><th><input type="text" name="g" value="{{qs.customer_names}}"></th></tr>
+    <tr><th><button type="submit">updated</button> </th></tr>
+</table>
+    </form>
+
+</body>
+</html>
